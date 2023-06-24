@@ -7,8 +7,8 @@ public:
         int bp = prices[0];
         int profit = 0;
         for(int i = 1; i<prices.size(); i++){
-            if(bp < prices[i]){
-                profit = max(profit, prices[i]-bp);
+            if(bp < prices[i]){\
+                profit = profit > prices[i]-bp ? profit : prices[i]-bp;
             }
             else if(bp > prices[i]){
                 bp = prices[i];
